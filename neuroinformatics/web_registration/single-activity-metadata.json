@@ -174,6 +174,10 @@
                     "type": "object",
                     "description": "Textual reusable description of the end-to-end protocol that describes how the experimentation was done and dataset has been created.",
                     "properties": {
+                        "id": {
+                            "type": "string",
+                            "description": "If the protocol is already registered, the id is mandatory. If it's a new protocol that user has added through UI, this field must be empty and the new protocol will be added to the database."
+                        },
                         "name": {
                             "type": "string"
                         },
@@ -220,12 +224,18 @@
         "organisation": {
             "type": "object",
             "javaType": "ch.epfl.hbp.nip.integration.registration.web.domain.Organisation",
+            "required": ["name"],
             "properties": {
                 "id": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "If the organisation is already registered, the id is mandatory. If it's a new organisations that user has added through UI, this field must be empty."
                 },
                 "name": {
                     "type": "string"
+                },
+                "lab": {
+                    "type": "string",
+                    "description": "The sub-entity within an organisation, e.g. Blue Brain Project within EPFL"
                 }
             },
             "additionalProperties": false
