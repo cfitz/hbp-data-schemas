@@ -12,9 +12,6 @@
         "registration": {
             "type": "object",
             "properties": {
-                "description": {
-                    "type": "string"
-                },
                 "production_end_date": {
                     "description": "The date on which the data has been produced.",
                     "type": "string",
@@ -88,7 +85,6 @@
         "specimen": {
             "type": "object",
             "required": [
-                "name",
                 "sex",
                 "species",
                 "age"
