@@ -174,9 +174,17 @@
                         "$ref": "#/definitions/onto_term"
                     }
                 },
-                "protocol_description": {
-                    "description": "This will go to activity_ref. Describes how the activity was performed.",
-                    "type": "string"
+                "protocol": {
+                    "type": "object",
+                    "description": "Textual reusable description of the end-to-end protocol that describes how the experimentation was done and dataset has been created.",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        }
+                    }
                 },
                 "assigned_class": {
                     "$ref": "#/definitions/onto_term"
