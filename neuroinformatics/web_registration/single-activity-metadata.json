@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "description": "A schema for simple description of a data registration.",
+    "description": "A schema for simple description of a data registration. Using this schema it's possible to describe a single-activity metadata. The following restrictions apply: only one activity (it's not possible to describes the steps), only once specimen. If the classification has been performed, we allow for only one class to be assigned to the dataset. The schema is currently used by 1-click registration interface for neuroinformatics platform. ",
     "version": "1.0-RC2",
     "type": "object",
     "required": [
